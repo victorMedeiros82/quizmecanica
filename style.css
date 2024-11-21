@@ -152,6 +152,9 @@ a {
 
 /* Responsividade */
 @media (min-width: 768px) {
+    #question{
+        padding:3rem;
+    }
     #question-container {
         width: 70%;
     }
