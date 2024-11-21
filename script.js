@@ -55,7 +55,7 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 let timer;
-let timeLeft = 30;
+let timeLeft = 60;
 let helpUsed = false;
 let remainingHelps = 4;
 //função que carrega a proxima pergunta
@@ -130,7 +130,7 @@ function endGame() {
 
 function resetTimer() {
     clearInterval(timer);
-    timeLeft = 30;
+    timeLeft = 60;
     document.getElementById("time").textContent = timeLeft;
     timer = setInterval(() => {
         timeLeft--;
