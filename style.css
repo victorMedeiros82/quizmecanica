@@ -60,7 +60,10 @@ header img {
 #score i {
     color: var(--gold3-color);
 }
-
+#question{
+    font-size: 20px;
+    margin: 30px -40px 20px -40px;
+}
 #timer,
 #questionNumber {
     background-color: var(--gold4-color);
@@ -70,13 +73,14 @@ header img {
 
 
 .grid-container {
+    margin: 0 -22px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
 }
 
 .grid-item {
-    padding: 10px;
+    /* padding: 10px; */
     text-align: center;
 }
 
@@ -99,7 +103,7 @@ header img {
 
 .button {
     /* display: inline-block; */
-/*     padding: 10px 30px; */
+    /* padding: 10px 30px; */
     font-size: 18px;
     font-weight: bold;
     /* text-transform: uppercase; */
@@ -110,7 +114,7 @@ header img {
     /* border-radius: 10%; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     /* Sombra */
-    transform: skew(-20deg);
+    transform: skew(-10deg);
     /* Inclinação do botão */
     position: relative;
     overflow: hidden;
@@ -152,15 +156,15 @@ a {
 
 /* Responsividade */
 @media (min-width: 768px) {
-    #questions{
-        padding:3rem;
-    }
     #question-container {
         width: 70%;
     }
 
     .grid-container {
         grid-template-columns: 1fr;
+    }
+    .button{
+        padding: 10px;
     }
 
     #btns {
@@ -169,17 +173,17 @@ a {
 }
 
 @media (min-width: 1024px) {
-    #questions{
-        padding:3rem;
-    }
     #question-container {
-        width: 50%;
+        width: 70%;
     }
 
     .grid-container {
         grid-template-columns: 1fr 1fr;
     }
 
+    .button{
+        padding: 10px;
+    }
     #btns {
         gap: 10 !important;
     }
