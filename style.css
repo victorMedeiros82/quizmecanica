@@ -70,7 +70,10 @@ header img {
     color: #fff;
     width: fit-content;
 }
-
+#questions{
+    padding: 2rem 2.7rem 1rem 2.7rem;
+    margin-bottom: 20px;
+}
 
 .grid-container {
     margin: 0 -22px;
@@ -118,6 +121,7 @@ header img {
     /* Inclinação do botão */
     position: relative;
     overflow: hidden;
+    margin: 0 -14px;
 }
 
 .button:hover {
@@ -174,18 +178,17 @@ a {
 
 @media (min-width: 1024px) {
     #question-container {
-        width: 70%;
+        width: 50%;
     }
-
+    #questions{
+    padding:3rem 2rem 1rem 2rem;
+    }
     .grid-container {
         grid-template-columns: 1fr 1fr;
+        column-gap: 50px !important;
     }
 
     .button{
         padding: 10px;
     }
-    #btns {
-        gap: 10 !important;
-    }
-
 }
