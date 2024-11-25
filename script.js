@@ -71,7 +71,7 @@ function loadQuestion() {
 
     // Criação do layout em grade
     const grid = document.createElement("div");
-    grid.classList.add("grid-container", "gap-4");
+    grid.classList.add("grid-container", "gap-3");
 
     q.options.forEach((opt, index) => {
         const btn = document.createElement("button");
