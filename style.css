@@ -194,7 +194,7 @@ a {
 
 @media (min-width: 1024px) {
     #logo-index {
-        width: 20px;
+        width: 200px !important;
     }
     #principal{
         width: 100%;
