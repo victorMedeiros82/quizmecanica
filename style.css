@@ -196,6 +196,9 @@ a {
     #logo-index {
         width: 20px;
     }
+    #principal{
+        width: 70%;
+    }
 
     #question-container {
         width: 70%;
