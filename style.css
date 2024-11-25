@@ -216,5 +216,7 @@ a {
     #modal-cores{
         display:flex;
     }
-
+    #modal-cores btn{
+        width:auto;
+    }
 }
