@@ -213,5 +213,8 @@ a {
     .button {
         padding: 10px;
     }
+    #modal-cores{
+        display:flex;
+    }
 
 }
