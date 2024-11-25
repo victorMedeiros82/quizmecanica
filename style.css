@@ -61,7 +61,7 @@ header img {
     color: var(--gold3-color);
 }
 #question{
-    font-size: 20px;
+    font-size: 1.8rem;
     margin: 30px -40px 20px -40px;
 }
 #timer,
@@ -117,7 +117,7 @@ header img {
     /* border-radius: 10%; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     /* Sombra */
-    transform: skew(-10deg);
+/*     transform: skew(-10deg); */
     /* Inclinação do botão */
     position: relative;
     overflow: hidden;
