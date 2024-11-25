@@ -9,6 +9,9 @@
     --gold3-color: #947025;
     --gold4-color: #a58535;
 }
+html{
+    font-size:62.5%
+}
 
 * {
     padding: 0;
