@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modelo de quiz para um processo seletivo para uma vaga de um mecanico de carros de luxo">
+    <meta name="description"
+        content="Modelo de quiz para um processo seletivo para uma vaga de um mecanico de carros de luxo">
     <meta name="keywords" content="quiz, processo seletivo, mecanico, carros de luxo">
     <title>Saber Automotivo</title>
     <!-- imrpotação do font awesome -->
@@ -13,165 +14,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-center align-items-center center vh-100">
     <main id="principal" class="container-fluid gap-5">
-        <header class="d-flex align-items-center gap-2 px-4">
-            <img src="logo-marista-auto-center.webp" alt="logo-marista-auto-center" srcset="">
-            <h1 class="">SABER AUTOMOTIVO</h1>
-        </header>
         <div class="container d-flex text-center">
             <div id="question-container"
-                class="container d-flex flex-column rounded-4 shadow p-4 mt-5 position-absolute top-50 start-50 translate-middle">
-                <div id="timeAndScore" class="d-flex flex-column align-items-end gap-3">
-                    <div id="timer" class="p-2 rounded-start-5 shadow"><span><i class="bi bi-clock-history"></i></span>
-                        <span id="time">30</span>
-                        segundos
-                    </div>
-                    <div id="score" class="d-flex gap-2 align-items-center">
-                        <span><i class="bi bi-stars"></i></span>PONTOS:<span id="points">0</span>
-                    </div>
-                </div>
-                <section id="questions" class="d-flex flex-column gap-3 shadow position-relative ">
-                    <span id="questionNumber"
-                        class="p-2 shadow-lg text-center position-absolute top-0 start-0">
-                        <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
-                    </span>
-                    <h3 id="question" class="text-uppercase">Pergunta aqui</h3>
-                    <div id="options" class="d-flex justify-content-center">
-                        <!-- Opções serão inseridas dinamicamente -->
-                    </div>
-                </section>
-                <section id="btns" class="d-flex justify-content-center gap-3">
-                    <button id="skip-btn" class="btn btn-danger p-3">NÃO SEI</button>
-                    <button onclick="helpColors()" id="help-btn" class="btn"><i class="fa-solid fa-handshake-angle"
-                            style="color: #ffff00;"></i>AJUDA</button>
-                </section>
-            </div>
-        </div>
-        <!-- Modal para não sei a resposta -->
-        <div class="modal fade" id="skip-modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">VOCÊ NÃO SABE A RESPOSTA?</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>VERIFIQUE SE VOCE AINDA TEM ALGUMA AJUDA ANTES DE NÃO RESPONDER A QUESTÃO.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button onclick="helpColors()" id="help-btn" class="btn w-25"><i
-                                class="fa-solid fa-handshake-angle" style="color: #ffff00;"></i>AJUDA</button> <button
-                            type="button" id="confirm-skip" class="btn btn-danger">NÃO SEI</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal para ajuda -->
-        <div class="modal fade" id="help-modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">AJUDA</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>AO ESCOLHER UMA DAS CORES VOCÊ TERA A SORTE DE ELIMINAR ENTRE 0 A 3 ALTERNATIVAS ERRADAS PARA
-                            LHE AJUDAR!<br>
-                            BOA SORTE!</p>
-                        <div class="d-flex justify-content-around gap-3">
-                            <button class="btn btn-danger help-option" data-help="0"></button>
-                            <button class="btn btn-success help-option" data-help="1"></button>
-                            <button class="btn btn-primary help-option" data-help="2"></button>
-                            <button class="btn btn-warning help-option" data-help="3"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal ajuda usada-->
-        <div class="modal fade" id="helpUsed-modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">AJUDA JÁ UTILIZADA OU NÃO TEM MAIS AJUDAS</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>PARECE QUE VOCÊ JÁ UTILIZOU AJUDA NESTA PERGUNTA, OU NÃO POSSUI MAIS AJUDAS.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal tela final -->
-        <div class="modal fade" id="endGame-modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">FIM DO QUIZ</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="header-modal">PREENCHA ATENTAMENTE AS INFORMAÇÕES NECESSÁRIAS</p>
-                        <p>VOCÊ CHEGOU AO FINAL DO QUIZ, PREENCHA AS INFORMAÇÕES NECESSÁRIAS E AGUARDE O CONTATO DA
-                            EQUIPE.</p>
-                        <p>A <a href="#">MARISTA AUTO CENTER</a> AGRADECE A SUA PARTICIPAÇÃO EM NOSSO PROCESSO
-                            SELETIVO.</p>
-
-                        <form id="feedback-form" class="row g-3">
-                            <div class="col-md-12">
-                                <label for="name" class="form-label">NOME COMPLETO</label>
-                                <input type="text" id="fullname" class="form-control" placeholder="Nome" value="" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="phone" class="form-label">TELEFONE:</label>
-                                <input type="tel" id="phone" maxlength="15" onkeyup="handlePhone(event)"
-                                    class="form-control" placeholder="(00)00000-0000" value="" required>
-                            </div>
-                            <div class="col-6">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="seuNome@exemplo.com" value="" required>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input id="checkIndica" class="form-check-input" type="checkbox" value="check"
-                                        id="defaultCheck1">
-
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        <span>FUI INDICADO POR:</span>
-                                    </label>
-                                </div>
-                                <div id="nameIndica" class="col-md-12 d-none">
-                                    <label for="nameIndica" class="form-label">NOME DE QUEM INDICOU</label>
-                                    <input type="text" id="nameIndica" class="form-control"
-                                        placeholder="NOME DE QUEM INDICOU" required>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="feedback" class="form-label">OBSERVAÇÕES</label>
-                                <textarea id="feedback" class="form-control" rows="3"></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button id="botao-final" type="submit" class="btn btn-primary">ENVIAR</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal agradecimento -->
-        <div class="modal fade" id="agradecimento-modal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="text-uppercase modal-title">Agradecimentos.</h5>
-                    </div>
-                    <div class="modal-body">
-                        <p>Agradecemos por participar do nosso processo seletivo no formato de game quiz!<br>
-                            Foi ótimo contar com sua participação</p>
-                        <p><button class="btn btn-success" onclick="atualizarPagina()">REINICIAR QUIZ</button></p>
-                        <p><button class="btn btn-danger" onclick="fecharJanela()">FECHAR JOGO</button></p>
-                    </div>
+                class="container d-flex flex-column rounded-4 shadow p-4 mt-5 align-items-center gap-3">
+                <img id="logo-index" src="/logo-marista-auto-center.webp" class="p-4 rounded-4 shadow-lg w-50"
+                    alt="logo marista auto center" />
+                <h1 class="fw-bold">SABER AUTOMOTIVO</h1>
+                <div id="btns" class=" d-flex flex-column gap-3">
+                    <a class="btn btn-success" href="/game.html">COMEÇAR</a>
+                    <a class="btn btn-primary">INFORMAÇÕES</a>
                 </div>
             </div>
         </div>
