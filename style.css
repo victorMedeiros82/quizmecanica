@@ -12,6 +12,10 @@
 
 html {
     font-size: 62.5%;
+     height:100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 * {
@@ -32,10 +36,7 @@ body {
 main {
     padding: 0 !important;
     margin: 0 !important;
-    height:100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center
+   
 }
 
 header {
