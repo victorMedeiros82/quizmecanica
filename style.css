@@ -26,15 +26,16 @@ body {
     background-position: center top;
     background-size: cover;
     background-repeat: repeat-y;
-    height:100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center
+    
 }
 
 main {
     padding: 0 !important;
     margin: 0 !important;
+    height:100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 header {
