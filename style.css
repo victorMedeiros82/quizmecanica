@@ -12,10 +12,6 @@
 
 html {
     font-size: 62.5%;
-     height:100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center
 }
 
 * {
@@ -30,7 +26,10 @@ body {
     background-position: center top;
     background-size: cover;
     background-repeat: repeat-y;
-    
+    /*height:100dvh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 main {
