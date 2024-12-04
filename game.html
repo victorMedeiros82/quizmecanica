@@ -16,32 +16,32 @@
 
 <body>
     <main id="principal" class="d-flex flex-column justify-content-center ">
-        <div class="container d-flex text-center">
-            <div id="question-container" class="container d-flex flex-column rounded-4 shadow p-4">
-                <div id="timeAndScore" class="d-flex flex-column align-items-end gap-2">
-                    <div id="timer" class="p-2 shadow"><span><i class="bi bi-clock-history"></i></span>
-                        <span id="time">30</span>
-                    </div>
-                    <div id="score" class="d-flex align-items-center gap-2">
-                        <span><i class="bi bi-stars"></i></span>PONTOS:<span id="points">0</span>
-                    </div>
+        <!-- <div class="container d-flex text-center"> -->
+        <div id="container" class="container d-flex flex-column rounded-4 shadow p-4">
+            <div id="timeAndScore" class="d-flex flex-column align-items-end gap-2">
+                <div id="timer" class="p-2 shadow"><span><i class="bi bi-clock-history"></i></span>
+                    <span id="time">30</span>
                 </div>
-                <span id="questionNumber" class="d-flex p-2 mb-3 shadow-lg text-center ">
-                    <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
-                </span>
-                <section id="questions" class="shadow rounded-4">
-                    <p id="question" class="text-uppercase fw-bold">Pergunta aqui</p>
-                    <div id="options" class="justify-content-center px-3 pb-3">
-                        <!-- Opções serão inseridas dinamicamente -->
-                    </div>
-                </section>
-                <section id="btns" class="d-flex justify-content-center gap-3">
-                    <button id="skip-btn" class="btn btn-danger p-3">NÃO SEI</button>
-                    <button onclick="helpColors()" id="help-btn" class="btn"><i class="fa-solid fa-handshake-angle"
-                            style="color: #ffff00;"></i>AJUDA</button>
-                </section>
+                <div id="score" class="d-flex align-items-center gap-2">
+                    <span><i class="bi bi-stars"></i></span>PONTOS:<span id="points">0</span>
+                </div>
             </div>
+            <span id="questionNumber" class="d-flex p-2 mb-3 shadow-lg text-center ">
+                <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+            </span>
+            <section id="questions" class="shadow rounded-4">
+                <p id="question" class="text-uppercase fw-bold text-center">Pergunta aqui</p>
+                <div id="options" class="justify-content-center px-3 pb-3">
+                    <!-- Opções serão inseridas dinamicamente -->
+                </div>
+            </section>
+            <section id="btns" class="d-flex justify-content-center gap-3">
+                <button id="skip-btn" class="btn btn-danger p-3">NÃO SEI</button>
+                <button onclick="helpColors()" id="help-btn" class="btn"><i class="fa-solid fa-handshake-angle"
+                        style="color: #ffff00;"></i>AJUDA</button>
+            </section>
         </div>
+        <!-- </div> -->
         <!-- Modal para não sei a resposta -->
         <div class="modal fade" id="skip-modal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -102,7 +102,8 @@
                         <h5 class="modal-title">FIM DO QUIZ</h5>
                     </div>
                     <div class="modal-body">
-                        <p id="header-modal">VOCÊ CHEGOU AO FINAL DO QUIZ, PREENCHA AS INFORMAÇÕES NECESSÁRIAS E AGUARDE O CONTATO DA
+                        <p id="header-modal">VOCÊ CHEGOU AO FINAL DO QUIZ, PREENCHA AS INFORMAÇÕES NECESSÁRIAS E AGUARDE
+                            O CONTATO DA
                             EQUIPE.</p>
                         <p>A <a href="#">MARISTA AUTO CENTER</a> AGRADECE A SUA PARTICIPAÇÃO EM NOSSO PROCESSO
                             SELETIVO.</p>
@@ -160,7 +161,7 @@
                     <div class="modal-body">
                         <p>Agradecemos por participar do nosso processo seletivo no formato de game quiz!<br>
                             Foi ótimo contar com sua participação</p>
-                        <div id ="bts-agradecimento" class="d-flex justify-content-center gap-3">
+                        <div id="bts-agradecimento" class="d-flex justify-content-center gap-3">
                             <button class="btn btn-success" onclick="atualizarPagina()">REINICIAR QUIZ</button>
                             <button class="btn btn-danger" onclick="fecharJanela()">FECHAR JOGO</button>
                         </div>
