@@ -26,16 +26,15 @@ body {
     background-position: center top;
     background-size: cover;
     background-repeat: repeat-y;
-    /*height:100dvh;*/
     display: flex;
     justify-content: center;
     align-items: center
 }
 
 main {
-    padding: 0 !important;
-    margin: 0 !important;
-   
+    height: 100dvh;
+    /* padding: 0 !important; */
+    /* margin: 0 !important; */
 }
 
 header {
@@ -197,7 +196,8 @@ a {
     #logo-index {
         width: 200px !important;
     }
-    #principal{
+
+    #principal {
         width: 100%;
     }
 
@@ -206,21 +206,24 @@ a {
     }
 
     #questions {
-        padding: 3rem 2rem 1rem 2rem;
+        padding: 3rem 2rem;
     }
 
     .grid-container {
         grid-template-columns: 1fr 1fr;
-        column-gap: 50px !important;
+        column-gap: 70px !important;
+        row-gap: 30px !important;
     }
 
     .button {
         padding: 10px;
     }
-    #modal-cores{
-        display:flex;
+
+    #modal-cores {
+        display: flex;
     }
-    #modal-cores .btn{
-        width:auto;
+
+    #modal-cores .btn {
+        width: auto;
     }
 }
