@@ -22,17 +22,18 @@ html {
 }
 
 body {
+    height: 100dvh;
     background-image: url(bg_quiz.webp);
     background-position: center top;
     background-size: cover;
     background-repeat: repeat-y;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 main {
-    height: 100dvh;
+    
     /* padding: 0 !important; */
     /* margin: 0 !important; */
 }
